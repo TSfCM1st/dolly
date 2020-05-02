@@ -64,6 +64,7 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
                 'blog.context_processors.common',    # 追加
+                'django.template.context_processors.media',
             ],
         },
     },
@@ -120,3 +121,6 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 LOGIN_URL = 'admin:login'
+
+MEDIA_ROOT = os.path.join(BASE_DIR,'media')
+MEDIA_URL = '/media/'
